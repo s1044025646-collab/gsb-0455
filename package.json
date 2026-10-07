@@ -1,0 +1,25 @@
+{
+  "name": "zarray-prefix-service",
+  "version": "1.0.0",
+  "description": "本地字节串 Z 数组前缀匹配与边界出现次数核验后端（TypeScript + Node.js + SQLite）",
+  "type": "module",
+  "main": "dist/src/server.js",
+  "bin": {
+    "zinspect": "dist/src/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --no-warnings --test dist/tests/z.test.js",
+    "start": "node --no-warnings dist/src/server.js",
+    "serve": "node --no-warnings dist/src/server.js",
+    "demo": "npm run build && node --no-warnings dist/src/cli.js demo",
+    "cli": "node --no-warnings dist/src/cli.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
